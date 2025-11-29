@@ -11,39 +11,31 @@ System.out.print("Enter your age : ");
 int Age = sc.nextInt();
 
 
-double DiscForStudent = 0.2;
-
-double DiscForElder = 0.3;
-// int ElderAge = 40;
-
+double DiscForStudent = TicketPrice * 0.2;
+double DiscForElder = TicketPrice * 0.3;
 
 boolean isStudent = true;
-// boolean isElder = true;
-
-double finalPrice = TicketPrice;
 
 if(Age >= 12){
 
 
  if(isStudent){
- double discount = TicketPrice * DiscForStudent;
- finalPrice -= discount;
- System.out.println("You get Student discount and save " + discount);
+ TicketPrice -= DiscForStudent;
+ System.out.println("You get Student discount and save " + DiscForStudent);
  }else{
  System.out.println("You are not eligible for Student discount");
  }
 
 
  if(Age >= 40){
- double discount = TicketPrice * DiscForElder;
- finalPrice -= discount;
- System.out.println("You get Elder discount and save " + discount);
+ TicketPrice -= DiscForElder;
+ System.out.println("You get Elder discount and save " + DiscForElder);
  }else{
  System.out.println("You are not eligible for Elder discount");
  }
- 
+
 System.out.println("==============================================");
-System.out.println("Final ticket price: " + finalPrice);
+System.out.println("Final ticket price: " + TicketPrice);
 System.out.println("==============================================");
 
 }else{
